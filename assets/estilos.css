@@ -220,4 +220,15 @@ footer{margin-top:0}
   font-family:var(--sans); font-size:13px; color:var(--gris);
 }
 .pie-in a{text-decoration:none; border-bottom:1px solid var(--filete)}
+/* telefono: el menu de cinco entradas no cabe en un solo renglon,
+   asi que se aprieta el tipo y se juntan los renglones */
+@media(max-width:620px){
+  .barra-in{padding:20px 20px 16px; gap:14px}
+  .envoltura{padding-left:20px; padding-right:20px}
+  .pie-in{padding-left:20px; padding-right:20px}
+  nav{gap:9px 18px}
+  nav a{font-size:13px}
+}
+
 @media(prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+

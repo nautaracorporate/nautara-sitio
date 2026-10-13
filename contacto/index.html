@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto · Nautara Corporativa</title>
+<meta name="description" content="Escríbanos para agendar una primera conversación sin costo sobre la salud financiera de su empresa.">
+<link rel="canonical" href="https://nautara.com.mx/contacto/">
+<meta property="og:title" content="Contacto · Nautara Corporativa">
+<meta property="og:description" content="Escríbanos para agendar una primera conversación sin costo sobre la salud financiera de su empresa.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:url" content="https://nautara.com.mx/contacto/">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Literata:opsz,wght@7..72,300;7..72,400;7..72,600&family=Archivo:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/estilos.css">
+</head>
+<body>
+
+<a class="saltar" href="#principal">Saltar al contenido</a>
+
+<header class="barra">
+  <div class="barra-in">
+    <a class="logotipo" href="/">nautara</a>
+    <nav aria-label="Principal">
+      <a href="/">Inicio</a>
+      <a href="/enfoque/">Enfoque</a>
+      <a href="/servicios/">Servicios</a>
+      <a href="/bitacora/">Bitácora</a>
+      <a href="/contacto/" aria-current="page">Contacto</a>
+    </nav>
+  </div>
+</header>
+
+<main class="envoltura" id="principal">
+  <p class="cejilla">Contacto</p>
+  <h2>Cuénteme en qué está.</h2>
+  <p class="entrada">Respondo personalmente. La primera conversación no tiene costo y sirve para ubicar si lo suyo es análisis, financiamiento o las dos cosas.</p>
+
+  <div class="contacto">
+    <form id="forma" action="https://api.web3forms.com/submit" method="POST">
+      <!-- Pegar aqui la clave de acceso de Web3Forms. Ver README.md -->
+      <input type="hidden" name="access_key" value="PENDIENTE-CLAVE-WEB3FORMS">
+      <input type="hidden" name="subject" value="Nuevo mensaje desde nautara.com.mx">
+      <input type="hidden" name="from_name" value="Sitio Nautara">
+      <input type="checkbox" name="botcheck" class="oculto" style="display:none" tabindex="-1" autocomplete="off">
+
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+      </div>
+      <div class="campo">
+        <label for="empresa">Empresa</label>
+        <input id="empresa" name="empresa" type="text" autocomplete="organization">
+      </div>
+      <div class="campo">
+        <label for="correo">Correo</label>
+        <input id="correo" name="correo" type="email" autocomplete="email" required>
+      </div>
+      <div class="campo">
+        <label for="telefono">Teléfono</label>
+        <input id="telefono" name="telefono" type="tel" autocomplete="tel">
+      </div>
+      <div class="campo">
+        <label for="tema">En qué está</label>
+        <select id="tema" name="tema">
+          <option>Siento presión en el flujo de efectivo</option>
+          <option>Quiero más eficiencia y mejores resultados</option>
+          <option>Creo que necesito financiamiento</option>
+          <option>Quiero valuar mi empresa</option>
+          <option>Revisión contable y fiscal</option>
+          <option>Todavía no lo tengo claro</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje"></textarea>
+      </div>
+
+      <div class="consentimiento">
+        <input id="consiento" name="consentimiento" type="checkbox" value="si" required>
+        <label for="consiento">He leído el <a href="/aviso-de-privacidad/">Aviso de Privacidad</a> y acepto el tratamiento de mis datos personales.</label>
+      </div>
+
+      <button class="btn" type="submit">Enviar</button>
+    </form>
+
+    <div>
+      <div class="dato">
+        <span>Correo</span>
+        <strong>contacto@nautara.com.mx</strong>
+      </div>
+      <div class="dato">
+        <span>Ubicación</span>
+        <strong>Monterrey, Nuevo León</strong>
+      </div>
+      <div class="dato">
+        <span>Atención</span>
+        <strong>Lunes a viernes, 9:00 a 18:00</strong>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="pie-in">
+    <span>Nautara Corporativa · Monterrey, N.L.</span>
+    <span><a href="/aviso-de-privacidad/">Aviso de Privacidad</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

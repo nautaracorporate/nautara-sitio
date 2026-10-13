@@ -1,0 +1,223 @@
+/* Nautara Corporativa — hoja de estilos unica.
+   Blanco total, columna editorial estrecha, mucho aire vertical.
+   Escala de azules articos del abismo a la escarcha, solo en acentos y datos.
+   Serif de lectura para el texto, grotesca para etiquetas y cifras. */
+
+:root{
+  --blanco:#FFFFFF;
+  --abismo:#082E45;
+  --profundo:#0D4260;
+  --marino:#12688F;
+  --glaciar:#1A8FB5;
+  --hielo:#4FB8D1;
+  --escarcha:#BFE6F0;
+  --niebla:#EDF6F9;
+  --gris:#566C7D;
+  --filete:#D8E6EC;
+  --serif:"Literata",Georgia,"Times New Roman",serif;
+  --sans:"Archivo","Segoe UI",system-ui,sans-serif;
+  --marca:"Poppins","Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--blanco); color:var(--abismo);
+  font-family:var(--serif); font-size:17px; line-height:1.72;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%; height:auto}
+h1,h2,h3{margin:0; font-family:var(--serif); font-weight:400; text-wrap:balance; line-height:1.2}
+h4{margin:0; font-family:var(--sans); font-weight:600; text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+
+.saltar{
+  position:absolute; left:-9999px; top:0; background:var(--abismo); color:var(--blanco);
+  font-family:var(--sans); font-size:14px; padding:12px 18px; z-index:50;
+}
+.saltar:focus{left:0}
+
+/* barra */
+.barra{position:sticky; top:0; z-index:10; background:var(--blanco)}
+.barra-in{
+  max-width:1180px; margin:0 auto; padding:26px 32px 22px;
+  display:flex; align-items:baseline; gap:28px; flex-wrap:wrap;
+  border-bottom:1px solid var(--filete);
+}
+.logotipo{
+  font-family:var(--marca); font-weight:400; font-size:24px;
+  letter-spacing:.05em; line-height:1; margin-right:auto; text-decoration:none;
+}
+nav{display:flex; gap:28px; flex-wrap:wrap}
+nav a{
+  font-family:var(--sans); font-size:14px; color:var(--gris); text-decoration:none;
+  padding-bottom:3px; border-bottom:1px solid transparent;
+}
+nav a:hover{color:var(--abismo)}
+nav a[aria-current="page"]{color:var(--abismo); border-bottom-color:var(--glaciar)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{
+  outline:2px solid var(--glaciar); outline-offset:3px;
+}
+
+.envoltura{max-width:1180px; margin:0 auto; padding:clamp(64px,9vw,112px) 32px 120px}
+
+.cejilla{
+  font-family:var(--sans); font-size:11px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--glaciar); font-weight:600; margin-bottom:28px;
+}
+h1{font-size:clamp(34px,5.2vw,58px); font-weight:300; letter-spacing:-.022em; max-width:18ch}
+h2{font-size:clamp(27px,3.8vw,40px); font-weight:300; letter-spacing:-.018em; max-width:20ch}
+h3{font-size:clamp(20px,2.3vw,25px); font-weight:400; letter-spacing:-.01em}
+h4{font-size:15px}
+.entrada{font-size:clamp(18px,1.5vw,20px); line-height:1.65; color:var(--gris); margin-top:32px; max-width:54ch}
+.parrafo{margin-top:26px; color:var(--gris); max-width:60ch}
+.parrafo strong{font-weight:600; color:var(--abismo)}
+
+.acciones{display:flex; gap:28px; align-items:center; flex-wrap:wrap; margin-top:48px}
+.btn{
+  font-family:var(--sans); font-size:15px; font-weight:500; cursor:pointer; text-decoration:none;
+  display:inline-block; padding:15px 30px; border:1px solid var(--abismo);
+  background:var(--abismo); color:var(--blanco); border-radius:0;
+}
+.btn:hover{background:var(--profundo); border-color:var(--profundo)}
+.enlace{
+  font-family:var(--sans); font-size:15px; font-weight:500; color:var(--marino);
+  background:none; border:0; padding:0 0 2px; cursor:pointer; text-decoration:none;
+  display:inline-block; border-bottom:1px solid var(--escarcha);
+}
+.enlace:hover{border-bottom-color:var(--glaciar)}
+
+.aire{height:clamp(56px,8vw,96px)}
+.filete{border:0; border-top:1px solid var(--filete); margin:0}
+.destacado{margin-top:44px; max-width:62ch; font-size:clamp(18px,1.6vw,21px); line-height:1.6; color:var(--gris)}
+.destacado strong{font-weight:600; color:var(--abismo)}
+
+/* situaciones */
+.situaciones{display:grid; gap:clamp(34px,4vw,44px); margin-top:clamp(56px,7vw,80px)}
+@media(min-width:820px){.situaciones{grid-template-columns:repeat(3,1fr)}}
+.situacion{min-width:0; border-top:1px solid var(--filete); padding-top:24px}
+.situacion h3{font-size:clamp(19px,2vw,22px); margin-bottom:12px}
+.situacion p{color:var(--gris); font-size:15px; margin-bottom:16px}
+
+/* listas numeradas */
+.preguntas{list-style:none; padding:0; margin:clamp(44px,5vw,64px) 0 0; max-width:62ch}
+.preguntas li{
+  display:grid; grid-template-columns:auto 1fr; gap:22px; align-items:baseline;
+  padding:19px 0; border-top:1px solid var(--filete);
+}
+.preguntas li:last-child{border-bottom:1px solid var(--filete)}
+.preguntas b{
+  font-family:var(--sans); font-size:12px; font-weight:600; color:var(--hielo);
+  letter-spacing:.1em; font-variant-numeric:tabular-nums;
+}
+.preguntas span{font-size:clamp(17px,1.9vw,20px); color:var(--abismo); min-width:0}
+
+/* dos lineas */
+.lineas{display:grid; gap:clamp(48px,6vw,80px); margin-top:clamp(64px,8vw,104px)}
+@media(min-width:860px){.lineas{grid-template-columns:1fr 1fr}}
+.linea{min-width:0}
+.ordinal{
+  font-family:var(--sans); font-size:13px; font-weight:600; color:var(--hielo);
+  letter-spacing:.14em; font-variant-numeric:tabular-nums; display:block; margin-bottom:18px;
+}
+.linea h3{margin-bottom:16px}
+.linea p{color:var(--gris); font-size:16px; max-width:46ch}
+.sub{
+  font-family:var(--sans); font-size:11px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--gris); font-weight:600; margin:34px 0 0;
+}
+.lista{list-style:none; padding:0; margin:16px 0 0}
+.lista li{font-size:15px; color:var(--gris); padding:12px 0; border-top:1px solid var(--filete)}
+.lista li:last-child{border-bottom:1px solid var(--filete)}
+.lista li strong{font-weight:600; color:var(--abismo); display:block}
+.aclaracion{
+  margin-top:26px; padding-left:18px; border-left:2px solid var(--escarcha);
+  font-size:15px; color:var(--marino); max-width:46ch;
+}
+
+/* principios */
+.principios{display:grid; gap:clamp(36px,4vw,56px); margin-top:clamp(56px,7vw,88px)}
+@media(min-width:760px){.principios{grid-template-columns:repeat(2,1fr)}}
+.principio{min-width:0}
+.principio h4{margin-bottom:12px}
+.principio p{color:var(--gris); font-size:16px; max-width:44ch}
+
+/* medidor */
+.medidor{margin-top:clamp(56px,7vw,88px); overflow-x:auto}
+.medidor table{border-collapse:collapse; width:100%; min-width:420px; max-width:720px}
+.medidor caption{
+  text-align:left; font-family:var(--sans); font-size:11px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--glaciar); font-weight:600; padding-bottom:22px;
+}
+.medidor td{padding:14px 0; font-size:16px; border-top:1px solid var(--filete); color:var(--gris)}
+.medidor td:first-child{color:var(--abismo); width:42%}
+.medidor td:last-child{
+  text-align:right; width:76px; color:var(--abismo);
+  font-family:var(--sans); font-variant-numeric:tabular-nums; font-size:16px;
+}
+.medidor .total td{font-weight:600; color:var(--abismo); border-top:1px solid var(--abismo)}
+.barra-dato{height:6px; background:var(--glaciar); min-width:3px}
+.barra-dato.resta{background:var(--escarcha)}
+.pie{font-size:15px; color:var(--gris); margin-top:26px; max-width:58ch}
+
+/* bitacora */
+.nota{
+  margin-top:36px; padding-left:18px; border-left:2px solid var(--escarcha);
+  font-size:15px; color:var(--marino); max-width:52ch;
+}
+.articulos{margin-top:clamp(48px,6vw,72px)}
+.articulo{display:block; padding:34px 0; border-top:1px solid var(--filete); text-decoration:none}
+.articulo:last-child{border-bottom:1px solid var(--filete)}
+.meta{
+  font-family:var(--sans); font-size:11px; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--gris); font-variant-numeric:tabular-nums;
+}
+.articulo h3{margin:14px 0 10px; max-width:26ch}
+.articulo:hover h3{color:var(--marino)}
+.articulo p{color:var(--gris); font-size:16px; max-width:58ch}
+
+/* texto largo de un articulo */
+.cuerpo{max-width:62ch; margin-top:40px}
+.cuerpo p{margin-top:26px; color:var(--abismo)}
+.cuerpo h2{font-size:clamp(23px,2.6vw,29px); margin-top:52px}
+.cuerpo ul{margin:26px 0 0; padding-left:22px; color:var(--abismo)}
+.cuerpo li{margin-top:10px}
+.cuerpo strong{font-weight:600}
+
+/* contacto */
+.contacto{display:grid; gap:clamp(48px,6vw,88px); margin-top:clamp(48px,6vw,72px)}
+@media(min-width:860px){.contacto{grid-template-columns:1.15fr .85fr}}
+form{min-width:0}
+.campo{display:flex; flex-direction:column; gap:8px; margin-bottom:24px}
+.campo label{font-family:var(--sans); font-size:13px; font-weight:600}
+input,textarea,select{
+  font-family:var(--serif); font-size:16px; color:var(--abismo); background:var(--blanco);
+  border:0; border-bottom:1px solid var(--filete); border-radius:0; padding:10px 2px; width:100%;
+}
+input:focus,textarea:focus,select:focus{border-bottom-color:var(--glaciar)}
+textarea{min-height:110px; resize:vertical}
+.legal{font-size:14px; color:var(--gris); margin-top:20px; max-width:46ch}
+.consentimiento{display:flex; gap:12px; align-items:flex-start; margin-bottom:24px}
+.consentimiento input{width:auto; flex:none; margin-top:7px}
+.consentimiento label{font-family:var(--sans); font-size:14px; font-weight:400; color:var(--gris)}
+.oculto{position:absolute; left:-9999px}
+.acuse{margin-top:24px; padding-left:18px; border-left:2px solid var(--glaciar); font-size:15px; color:var(--marino)}
+.dato{padding:22px 0; border-top:1px solid var(--filete)}
+.dato:last-child{border-bottom:1px solid var(--filete)}
+.dato span{
+  display:block; font-family:var(--sans); font-size:11px; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--gris); margin-bottom:8px;
+}
+.dato strong{font-weight:400; font-size:17px; word-break:break-word}
+
+footer{margin-top:0}
+.pie-in{
+  max-width:1180px; margin:0 auto; padding:30px 32px;
+  border-top:1px solid var(--filete);
+  display:flex; gap:18px; flex-wrap:wrap; justify-content:space-between;
+  font-family:var(--sans); font-size:13px; color:var(--gris);
+}
+.pie-in a{text-decoration:none; border-bottom:1px solid var(--filete)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}

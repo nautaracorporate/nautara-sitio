@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nautara.com.mx/sitemap.xml
